@@ -1,5 +1,31 @@
-<div class="container-fluid" id="webgl">
-    <div class="iframe-containerx">
-        <iframe src="/Builds/WebGL/index.html" frameborder="0" onload="resizeIframe(this);"></iframe>
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | SafeDrive</title>
+  <link rel="shortcut icon" href="/Builds/WebGL/TemplateData/favicon.ico">
+  <link rel="stylesheet" href="/Builds/WebGL/TemplateData/style.css">
+  <script src="/Builds/WebGL/TemplateData/UnityProgress.js"></script>
+  <script src="/Builds/WebGL/Build/UnityLoader.js"></script>
+  <script>
+    var gameInstance = UnityLoader.instantiate("gameContainer", "/Builds/WebGL/Build/WebGL.json", { onProgress: UnityProgress });
+  </script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="webgl-content">
+      <div class="footer" style="margin-top:30px;">
+          <div class="webgl-logo"></div>
+          <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+          <div class="title">SafeDrive</div>
+      </div>
+      <div id="gameContainer" style="width: 800px; height: 500px; position: relative;"></div>
     </div>
-</div>
+  </div>
+  </div>
+</body>
+
+</html>

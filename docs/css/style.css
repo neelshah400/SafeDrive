@@ -30,3 +30,6 @@ nav {
   color: inherit;
   text-decoration: inherit;
 }
+#content {
+  padding-top: 50px;
+}
