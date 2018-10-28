@@ -30,6 +30,9 @@ nav {
   color: inherit;
   text-decoration: inherit;
 }
-#content {
-  padding-top: 50px;
+.container-fluid {
+  padding-top: 40px;
+}
+.no-style img {
+  margin: 10px 0px 10px 0px;
 }
