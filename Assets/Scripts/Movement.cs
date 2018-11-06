@@ -17,12 +17,21 @@ public class Movement : MonoBehaviour {
     void Start () {
 
         rb = GetComponent<Rigidbody2D>();
+        Input.ResetInputAxes();
 
     }
 	
 	// Update is called once per frame
 	void Update () {
 
+        if(Input.GetKeyUp(KeyCode.LeftArrow) && Input.GetKeyUp(KeyCode.A))
+        {
+            Input.ResetInputAxes();
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow) && Input.GetKeyUp(KeyCode.D))
+        {
+            Input.ResetInputAxes();
+        }
         factor = 0;
         if (Input.GetAxis("Horizontal") == -1)
         {
